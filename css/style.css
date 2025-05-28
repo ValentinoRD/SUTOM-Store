@@ -157,7 +157,7 @@ h1{
     border-radius: 30px;
     text-decoration: none;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: background 0.2s;
+    transition: background-color 0.3s, color 0.3s;
     gap: 8px;
 }
 .btn-whatsapp:hover {
@@ -175,5 +175,12 @@ h1{
     width: 20px;
     height: 20px;
     }
+}
+
+.carousel-img {
+    max-height: 768px; /* O el valor que prefieras */
+    object-fit: contain; /* Muestra toda la imagen sin recortar */
+    width: 100%;
+    background: #000; /* Opcional: color de fondo para los bordes vacíos */
 }
 
