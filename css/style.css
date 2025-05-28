@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', 'Mukta', 'Work Sans', Arial, sans-serif;
+}
+h1{
+    color: white;
+    font-weight: bold; 
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    color: #ffffff; 
+    margin: 0;
+    text-shadow: 1px 1px 8px #f5f5f5e9; /* Sombra */
+    transition: color 0.3s;
+}
+
+.logo{
+    width:  100%;
+    height: 100%;
+}
+.navbar{
+    background-color: rgb(0, 0, 0) !important;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.navbar-nav .nav-link.active {
+    font-family: 'Montserrat', 'Mukta', 'Work Sans', Arial, sans-serif;
+    border-radius: 16px; /* Más redondeado */
+    border: 3px solid transparent; /* Borde más grueso */
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px 12px; /* Menos padding para que el borde quede más cerca del texto */
+    background: 
+        linear-gradient(#000000, #000000) padding-box, /* Fondo interior */
+        linear-gradient(90deg, #a7a7a7, #ffffff) border-box; /* Degradado del borde */
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff; /* Cambia este color por el que prefieras */
+    font-weight: bold;
+    background: 
+        linear-gradient(#000000, #000000) padding-box, /* Fondo interior Linear-gradient para hacer degradados padding-box se aplica solo en el area de relleno, interior y borderbox solo el degradado en el borde*/
+        linear-gradient(90deg, #ffffff, #ffffff) border-box; /* Degradado del borde */
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    border-color: #ffffff; /* cambia el color del borde */
+    transition: all 0.2s;
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+}
+.dropdown-menu .dropdown-item:hover {
+    color: #ffffff;
+    font-weight: bold;
+    background: 
+        linear-gradient(#000000, #000000) padding-box, /* Fondo interior opcional */
+        linear-gradient(90deg, #ffffff, #ffffff) border-box; /* Degradado del borde opcional */
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    border-color: #000000; /*cambia el color del borde */
+    transition: all 0.2s;
+}
+@media (max-width: 1200px) {
+    .navbar-nav .nav-link {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .navbar-nav{
+        width: 100%;
+        justify-content: center !important;
+        text-align: center;
+    }
+    .navbar-brand {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 991.98px) { /* xl breakpoint de Bootstrap */
+    .navbar-nav {
+    width: 100%;
+    justify-content: center !important;
+    text-align: center;
+    }
+    .navbar-nav .nav-link {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    }
+}
+
+/* Opcional: solo para móviles, no para iPad */
+@media (max-width: 767.98px) {
+    .navbar-nav .nav-link {
+        display: inline-block;
+        width: auto;
+    }
+}
+@media (min-width: 320px) and (max-width: 350px) {
+    /* celulares pequeños */
+    h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    
+    }
+}
+@media (min-width: 1920px) and (max-width: 1920px) {
+    h1 {
+        
+    font-size: 2.5rem; /* Aumenta el tamaño del texto */
+        letter-spacing: 0.3rem; /* Aumenta el espaciado entre letras */
+    }
+}
+
