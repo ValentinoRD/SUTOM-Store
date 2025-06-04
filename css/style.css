@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Montserrat", "Mukta", "Work Sans", Arial, sans-serif;
-  background-color: #ffffff; 
+  background-color: #000000; 
 }
 h1 {
   color: white;
@@ -214,10 +214,10 @@ footer {
 }
 
 .carousel-img {
-  max-height: 768px; /* O el valor que prefieras */
-  object-fit: contain; /* Muestra toda la imagen sin recortar */
   width: 100%;
-  background: #000; /* Opcional: color de fondo para los bordes vacíos */
+  height: 600px;         /* Puedes ajustar este valor según tu diseño */
+  object-fit: cover;     /* Hace que todas las imágenes llenen el espacio y se recorten si es necesario */
+  background: #000;      /* Fondo negro para los bordes si la imagen no cubre todo */
 }
 
 .carousel-caption {
@@ -274,5 +274,10 @@ footer {
   }
   .speach {
     font-size: 1.1rem;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 240px;
   }
 }
