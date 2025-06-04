@@ -278,6 +278,6 @@ footer {
 }
 @media (max-width: 576px) {
   .carousel-img {
-    height: 240px;
+    height: 280px;
   }
 }
