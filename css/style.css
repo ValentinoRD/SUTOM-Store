@@ -89,6 +89,51 @@ footer {
   border-color: #000000; /*cambia el color del borde */
   transition: all 0.2s;
 }
+
+/* CARDS */
+.container-card{ 
+  background-color: white;
+}
+.card{
+  max-width: 360px; /* Ancho máximo de la tarjeta */
+  margin: 0 auto; /* Centra la tarjeta horizontalmente */
+}
+.card-img-top {
+  max-height: 220px;    /* de 180px a 220px */
+  object-fit: cover;    /* Recorta la imagen para que llene el espacio sin deformarse */
+  width: 100%;
+}
+.card-title {
+  font-family: 'Montserrat', 'Mukta', 'Work Sans', Arial, sans-serif;        /* Negrita */
+  color: #222;              /* Color oscuro para contraste */
+  letter-spacing: 0.05em;   /* Espaciado entre letras */
+  margin-bottom: 4px;       /* Espacio entre h5 y h6 */
+  text-shadow: 0 1px 4px rgba(0,0,0,0.08); /* Sombra sutil */
+}
+
+.card-title + .card-title {
+  font-size: 1.1rem;          /* h6 más pequeño */
+  font-weight: bold; 
+  color: #000000;           /* Color de acento */
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* CARDS */
+
+@media (max-width: 991.98px) {
+  .card-img-top {
+    height: 180px;    /* Pantallas medianas de 140px a 180px */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 140px;    /* Celulares de 100px a 140px */
+  }
+}
+
 @media (max-width: 1200px) {
   .navbar-nav .nav-link {
     display: inline-block;
