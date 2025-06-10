@@ -327,3 +327,27 @@ footer {
     height: 300px;
   }
 }
+
+/* revestimientos */
+.revestimientos{
+  background-color: white;
+}
+
+.revestimientos h3 {
+  font-size: 1.8rem; /* Tamaño del título */
+  text-align: center;
+  padding: 40px;
+  /* text-transform: uppercase; */
+    letter-spacing: 0.1rem; /* Espaciado entre letras */
+}
+
+.revestimientos p {
+  max-width: 950px;    /* Limita el ancho máximo del párrafo */
+  margin-left: auto;   /* Centra horizontalmente */
+  margin-right: auto;  /* Centra horizontalmente */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
