@@ -5,8 +5,9 @@
 }
 body {
   font-family: "Montserrat", "Mukta", "Work Sans", Arial, sans-serif;
-  background-color: #000000; 
+  background-color: #000000;
   padding-top: 80px;
+  overflow-x: hidden;
 }
 h1 {
   color: white;
@@ -91,6 +92,22 @@ footer {
 }
 
 /* CARDS */
+
+.card {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1);
+  border-radius: 16px;
+  border: none;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.card-img-top {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border: 2px solid #fff;
+}
 .container-card{ 
   background-color: white;
 }
@@ -109,6 +126,9 @@ footer {
   letter-spacing: 0.05em;   /* Espaciado entre letras */
   margin-bottom: 4px;       /* Espacio entre h5 y h6 */
   text-shadow: 0 1px 4px rgba(0,0,0,0.08); /* Sombra sutil */
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .card-title + .card-title {
@@ -330,7 +350,25 @@ footer {
 
 /* revestimientos */
 .revestimientos{
-  background-color: white;
+  background-color: #000 !important;
+  color: #fff !important;
+  padding: 40px 0;
+}
+
+.revestimientos h3,
+.revestimientos h4 {
+  color: #fff !important;
+}
+
+.revestimientos p,
+.revestimientos ul,
+.revestimientos li {
+  color: #000000;
+  text-align: center;
+}
+
+.revestimientos {
+  background-color: transparent;
 }
 
 .revestimientos h3 {
@@ -342,12 +380,63 @@ footer {
 }
 
 .revestimientos p {
-  max-width: 950px;    /* Limita el ancho máximo del párrafo */
-  margin-left: auto;   /* Centra horizontalmente */
-  margin-right: auto;  /* Centra horizontalmente */
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 0px; /* Menos espacio entre párrafos */
   text-align: center;
-  color: black;
+  color: #fff;
 }
+
+.tienda-bg {
+  background-color: #000;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* .tienda-bg h3 {
+
+} */
+
+.card {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border-radius: 16px;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.card-title, .card-body, .list-group-item {
+  color: #000 !important;
+}
+
+.list-group-item {
+  color: #000 !important;
+  background-color: #fff;
+  border: none;
+}
+
+.btn-outline-dark {
+  border-radius: 24px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-success, .btn-primary {
+  color: #fff;
+}
+
