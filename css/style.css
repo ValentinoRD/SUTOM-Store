@@ -390,6 +390,11 @@ footer {
   color: #fff;
 }
 
+.revestimientos ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .tienda-bg {
   background-color: #000;
   padding-top: 40px;
@@ -440,3 +445,12 @@ footer {
   color: #fff;
 }
 
+.texto-blanco,
+.texto-blanco h3,
+.texto-blanco h4,
+.texto-blanco p {
+  color: #fff;
+}
+.texto-blanco li {
+  color: #fff;
+}
