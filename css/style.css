@@ -281,9 +281,21 @@ footer {
 
 .carousel-img {
   width: 100%;
-  height: 650px;         /* Puedes ajustar este valor según tu diseño */
+  height: 100vh;         /* Puedes ajustar este valor según tu diseño 650px antes*/
   object-fit: cover;     /* Hace que todas las imágenes llenen el espacio y se recorten si es necesario */
   background: #000;      /* Fondo negro para los bordes si la imagen no cubre todo */
+}
+
+@media (max-width: 991.98px) { /* Tablets */
+  .carousel-img {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 576px) { /* Móviles */
+  .carousel-img {
+    height: 40vh;
+  }
 }
 
 .carousel-caption {
@@ -342,12 +354,12 @@ footer {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .carousel-img {
     height: 300px;
   }
 }
-
+ */
 /* revestimientos */
 .revestimientos{
   background-color: #000 !important;
