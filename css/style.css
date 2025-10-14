@@ -31,6 +31,29 @@ h2 {
   text-shadow: 1px 1px 8px #000000; /* Sombra */
   transition: color 0.3s;
 }
+h1, h2, h3, h4, h5, h6, .speach {
+  text-shadow: 1px 2px 12px rgba(0,0,0,0.35);
+}
+.bloque-destacado {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+.fade-in {
+  animation: fadeIn 1.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.btn-light:hover {
+  background: #222;
+  color: #fff;
+  border-color: #fff;
+}
 
 .logo {
   width: 100%;
@@ -42,6 +65,8 @@ footer {
   padding: 25px 0;        /* Espaciado arriba y abajo */
   text-align: center;     /* Centra el texto */
   font-size: 1rem;        /* Tamaño de fuente */
+  border-top: 1px solid #fff;
+  /*  border-top: 1px solid rgba(255,255,255,0.2); */ 
 }
 
 .navbar {
@@ -372,12 +397,7 @@ footer {
   color: #fff !important;
 }
 
-.revestimientos p,
-.revestimientos ul,
-.revestimientos li {
-  color: #000000;
-  text-align: center;
-}
+
 
 .revestimientos {
   background-color: transparent;
@@ -399,13 +419,9 @@ footer {
   line-height: 1.6;
   margin-bottom: 0px; /* Menos espacio entre párrafos */
   text-align: center;
-  color: #fff;
+
 }
 
-.revestimientos ul {
-  list-style-type: none;
-  padding-left: 0;
-}
 
 .tienda-bg {
   background-color: #000;
@@ -463,6 +479,12 @@ footer {
 .texto-blanco p {
   color: #fff;
 }
-.texto-blanco li {
+.revestimientos ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.revestimientos ul li {
+  text-align: center;
   color: #fff;
 }
