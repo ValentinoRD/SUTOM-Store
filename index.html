@@ -48,7 +48,7 @@
               <a class="nav-link active" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">¿Quiénes somos?</a>
+              <a class="nav-link active" href="#QuienesSomos">¿Quiénes somos?</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -71,11 +71,11 @@
                   >
                 </li>
                 <li><a class="dropdown-item" href="#">Poliuretano</a></li>
-                <li><a class="dropdown-item" href="#">Proximamente</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Proximamente</a></li> -->
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Contáctanos</a>
+              <a class="nav-link active" href="#contacto">Contáctanos</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -168,7 +168,7 @@
 
     <main class="container">
       <section id="QuienesSomos" class="empresa row">
-        <h3 class="col-sm-12 col-sm-6 text-center">¿Quiénes somos?</h3>
+        <h3 class="col-sm-12 text-center">¿Quiénes somos?</h3>
         <article class="col-12 row">
           <p class="col-sm-12 col-md-6 p-2">
             Somos Gastón Allende y Tomás Blanco, arquitectos, colegas y amigos.
@@ -230,26 +230,43 @@
       </div>
     </div>
 
-    <div class="container-fluid my-5 texto-blanco revestimientos">
-      <div
-        class="bg-dark bg-opacity-75 rounded-4 p-4 mx-auto shadow-sm"
-        style="max-width: 700px; border: 1px solid rgba(255, 255, 255, 0.08)"
-      >
-        <h4
-          class="text-center text-white fw-bold mb-3"
-          style="text-shadow: 1px 2px 8px #000"
-        >
+    <div id="contacto" class="container-fluid my-5 texto-blanco revestimientos">
+      <div class="bg-dark bg-opacity-75 rounded-4 p-4 mx-auto shadow-sm" style="max-width:700px; border:1px solid rgba(255,255,255,0.08);">
+        <h4 class="text-center text-white fw-bold mb-3" style="text-shadow:1px 2px 8px #000;">
           ¿Querés Conocer más o Cotizar?
         </h4>
-        <ul class="revestimientos mx-auto" style="max-width: 600px">
-          <p class="text-center text-white mb-2">
-            Si te interesa transformar tus espacios y comprobar la calidad y
-            versatilidad de nuestros productos, ponete en contacto con nosotros.
-          </p>
-          <li class="text-white">Contáctanos:</li>
-          <li class="text-white">Tomás Blanco: Teléfono 351 592 1677</li>
-          <li class="text-white">Gastón Allende: Teléfono 351 592 1678</li>
-        </ul>
+
+        <p class="text-center text-white mb-4">
+          Si te interesa transformar tus espacios y comprobar la calidad y versatilidad de nuestros productos, ponete en contacto con nosotros.
+        </p>
+
+        <div class="d-flex flex-column align-items-center gap-3">
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="https://wa.me/5493515921677" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm rounded-pill d-flex align-items-center px-3 py-2">
+              <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
+              <span class="d-flex flex-column text-start">
+                <small class="fw-semibold">Tomás Blanco</small>
+                <small>351 592 1677</small>
+              </span>
+            </a>
+
+            <a href="https://wa.me/5493515921678" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm rounded-pill d-flex align-items-center px-3 py-2">
+              <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
+              <span class="d-flex flex-column text-start">
+                <small class="fw-semibold">Gastón Allende</small>
+                <small>351 592 1678</small>
+              </span>
+            </a>
+          </div>
+
+          <!-- email en recuadro sutil -->
+          <div class="text-center mt-3">
+            <div class="email-box d-inline-flex align-items-center">
+              <strong class="me-2 text-white">Email:</strong>
+              <a href="mailto:sutomrevestimientos@gmail.com" class="email-link" rel="noopener">sutomrevestimientos@gmail.com</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -306,25 +323,34 @@
       <i class="fab fa-whatsapp"></i> ¡Escríbenos!
     </a>
 
-    <footer class="text-white py-4 mt-5">
-      <div class="container-fluid text-center">
-        <p class="text-center text-white">
-          &copy; 2025 SUTOM REVESTIMIENTOS. Todos los derechos reservados.
-        </p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#" class="text-white">Política de Privacidad</a>
+    <footer class="site-footer text-white py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-2 small">&copy; 2025 SUTOM REVESTIMIENTOS. Todos los derechos reservados.</p>
+
+        <ul class="footer-links list-unstyled d-flex justify-content-center flex-column flex-sm-row align-items-center gap-2 mb-2">
+          <li>
+            <a href="#contacto" class="text-white footer-contact">
+              <i class="fas fa-comments me-1" aria-hidden="true"></i>Contacto
+            </a>
           </li>
-          <li class="list-inline-item">
-            <a href="#" class="text-white">Términos de Servicio</a>
+          <li>
+            <a href="mailto:sutomrevestimientos@gmail.com" class="text-white footer-mail" aria-label="Email Sutom">
+              <i class="fas fa-envelope me-1" aria-hidden="true"></i>sutomrevestimientos@gmail.com
+            </a>
           </li>
-          <li class="list-inline-item">
-            <a href="#" class="text-white">Contacto</a>s
+          <li>
+            <a href="https://www.instagram.com/sutomrevestimientos/" class="text-white footer-ig" target="_blank" rel="noopener noreferrer" aria-label="Instagram Sutom">
+              <i class="fab fa-instagram me-1" aria-hidden="true"></i>@sutomrevestimientos
+            </a>
           </li>
         </ul>
-        <p class="text-center text-white">
-          Diseñado por Valentino Rodriguez Desumvila
-        </p>
+
+        <p class="mb-0 small">
+  Diseñado por
+  <a href="https://www.instagram.com/valenrodriguez.des/" target="_blank" rel="noopener noreferrer" class="text-white designer-link" aria-label="Instagram Valentino">
+    Valentino Rodriguez Desumvila&nbsp;<span role="img" aria-label="enlace">🔗</span>
+  </a>
+</p>
       </div>
     </footer>
 

@@ -488,3 +488,73 @@ footer {
   text-align: center;
   color: #fff;
 }
+
+.email-box {
+  background: rgba(255,255,255,0.04); /* recuadro muy sutil sobre fondo oscuro */
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.email-box .email-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+.email-box .email-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Footer: chips y mejor experiencia en móvil */
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+
+.footer-links li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  transition: background 0.18s ease, transform 0.12s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links li a i { font-size: 1.05rem; }
+
+/* hover / focus */
+.footer-links li a:hover,
+.footer-links li a:focus {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+  text-decoration: none;
+  outline: none;
+}
+
+/* Movil: apilar y agrandar hit area */
+@media (max-width: 576px) {
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-links li a {
+    width: 92%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    margin: 0 auto;
+  }
+  .site-footer p.small { font-size: 0.85rem; }
+}
+
+/* ajustar espacio entre líneas en desktop */
+@media (min-width: 577px) {
+  .footer-links { gap: 1rem; }
+}
