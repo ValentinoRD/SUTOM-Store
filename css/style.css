@@ -397,6 +397,30 @@ footer {
   color: #fff !important;
 }
 
+/* Reglas responsive para la imagen en la sección .empresa */
+.empresa img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover; /* recorta manteniendo aspecto */
+}
+
+/* Desktop: limitar altura y ancho máximo */
+@media (min-width: 992px) {
+  .empresa img {
+    max-width: 420px; /* ancho máximo en desktop */
+    max-height: 360px; /* altura máxima en desktop */
+  }
+}
+
+/* Móvil: limitar altura para no consumir mucho espacio */
+@media (max-width: 576px) {
+  .empresa img {
+    max-width: 320px; /* ancho máximo en móvil */
+    max-height: 220px; /* altura máxima en móvil */
+  }
+}
 
 
 .revestimientos {
