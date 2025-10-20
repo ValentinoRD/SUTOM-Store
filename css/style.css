@@ -26,7 +26,7 @@
 }
 
 /* Fallback adicional: para algunos navegadores móviles se puede usar scroll-padding-top en el contenedor root */
-html { scroll-padding-top: var(--nav-h); }
+html { scroll-padding-top: var(--nav-h); }/*  */
 
 html, body {
   font-family: "Montserrat", "Mukta", "Work Sans", Arial, sans-serif;
