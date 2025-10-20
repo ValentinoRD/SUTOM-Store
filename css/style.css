@@ -362,6 +362,21 @@ footer {
     font-size: 1.1rem;
   }
 }
+/* Mobile padding for .revestimientos to match index spacing */
+@media (max-width: 576px) {
+  .revestimientos {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .revestimientos h3 {
+    padding: 18px 0 12px 0; /* reduce large padding on mobile */
+  }
+  .revestimientos p, .revestimientos ul, .revestimientos .list-group-item {
+    padding-inline: 8px;
+    text-align: left;
+  }
+  .revestimientos ul { padding-left: 18px; }
+}
 
 .carousel-img {
   width: 100%;
