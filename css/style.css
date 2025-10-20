@@ -177,14 +177,26 @@ footer {
   background-color: white;
 }
 .card{
-  max-width: 360px; /* Ancho máximo de la tarjeta */
-  margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  max-width: 100%; /* Permitir que la tarjeta ocupe el ancho de la columna */
+  margin: 0 auto;
 }
+/* Imágenes de las cards: más altura vertical y enfoque hacia la parte superior */
 .card-img-top {
-  max-height: 220px;    /* de 180px a 220px */
-  object-fit: cover;    /* Recorta la imagen para que llene el espacio sin deformarse */
+  height: 380px;              /* altura visible en desktop */
+  object-fit: cover;          /* rellena y recorta sin deformar */
+  object-position: 50% 18%;   /* muestra más la parte superior de la imagen */
   width: 100%;
+  display: block;
+  transition: transform 0.45s ease, filter 0.35s ease;
 }
+
+/* Efecto sutil al pasar el ratón: la imagen hace un pequeño zoom */
+/* zoom on image removed per user request */
+
+/* Utilidades para controlar la posición vertical visible de la imagen */
+.img-top-center { object-position: center top; }
+.img-top-focus-top { object-position: center 10%; }    /* muestra más la parte superior */
+.img-top-focus-bottom { object-position: center 90%; } /* muestra más la parte inferior */
 .card-title {
   font-family: 'Montserrat', 'Mukta', 'Work Sans', Arial, sans-serif;        /* Negrita */
   color: #222;              /* Color oscuro para contraste */
@@ -209,13 +221,20 @@ footer {
 
 @media (max-width: 991.98px) {
   .card-img-top {
-    height: 180px;    /* Pantallas medianas de 140px a 180px */
+    height: 260px;    /* Pantallas medianas */
+    object-position: 50% 20%;
   }
 }
 
 @media (max-width: 576px) {
   .card-img-top {
-    height: 140px;    /* Celulares de 100px a 140px */
+    height: 220px;    /* Celulares: aumentar altura para mostrar más imagen */
+    object-position: 50% 40%; /* centrar un poco más verticalmente */
+  }
+
+  /* Móviles muy pequeños: mantener altura moderada para no romper el layout */
+  @media (max-width: 360px) {
+    .card-img-top { height: 160px; object-position: 50% 45%; }
   }
 }
 
