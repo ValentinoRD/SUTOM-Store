@@ -266,8 +266,8 @@
         <ul class="footer-links list-unstyled d-flex justify-content-center flex-column flex-sm-row align-items-center gap-2 mb-2">
           <li>
             <a href="../index.html#contacto" class="text-white footer-contact">
-              <i class="fas fa-comments me-1" aria-hidden="true"></i>Contacto
-            </a>
+              <!-- <i class="fas fa-comments me-1" aria-hidden="true"></i>Contacto
+            </a> -->
           </li>
           <li>
             <a href="mailto:sutomrevestimientos@gmail.com" class="text-white footer-mail" aria-label="Email Sutom">
@@ -290,11 +290,51 @@
       </div>
     </footer>
 
+    <!-- Modal reutilizable para ver la imagen en grande -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body p-0 position-relative">
+            <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <img id="modalImage" src="" alt="" class="img-fluid w-100" style="max-height:85vh; object-fit:contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    // Al hacer clic en el botón 'Ver características' abrimos el modal con la imagen de la misma card
+    document.addEventListener('DOMContentLoaded', function(){
+      const modalEl = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      // Creamos instancia Bootstrap cuando haga falta
+      let bsModal;
+
+      document.querySelectorAll('.btn-outline-dark[data-bs-toggle="collapse"]').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          // Buscar la imagen dentro de la misma tarjeta (.card)
+          const card = btn.closest('.card');
+          if (!card) return;
+          const img = card.querySelector('.card-img-top');
+          if (!img) return;
+          const src = img.getAttribute('data-full') || img.src;
+          modalImage.src = src;
+          modalImage.alt = img.alt || '';
+          if (!bsModal) bsModal = new bootstrap.Modal(modalEl);
+          bsModal.show();
+        });
+      });
+
+      // Limpiar src al cerrar para liberar memoria
+      modalEl.addEventListener('hidden.bs.modal', function () { modalImage.src = ''; });
+    });
+    </script>
 </body>
 </html>
