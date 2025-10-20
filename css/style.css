@@ -11,6 +11,23 @@
   --body-line-height: 1.6;
 }
 
+/* Altura del navbar fijo: ajustar si tu header cambia de tamaño */
+:root{ --nav-h: 84px; }
+
+/* Evita que un header fijo tape el contenido al navegar a un ancla.
+   Aplica una separación visual cuando se navega por fragmentos (#id).
+   --nav-h se puede ajustar si tu navbar tiene otra altura. */
+/* Regla global para navegadores modernos */
+[id] { scroll-margin-top: var(--nav-h); }
+
+/* Regla específica (si querés forzar sólo para las secciones relevantes) */
+#revestimiento-wpc, #revestimiento-poliuretano, #contacto, #QuienesSomos {
+  scroll-margin-top: calc(var(--nav-h) + 8px);
+}
+
+/* Fallback adicional: para algunos navegadores móviles se puede usar scroll-padding-top en el contenedor root */
+html { scroll-padding-top: var(--nav-h); }
+
 html, body {
   font-family: "Montserrat", "Mukta", "Work Sans", Arial, sans-serif;
   font-size: 1rem;             /* 1rem = tamaño calculado por :root */
