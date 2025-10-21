@@ -673,3 +673,20 @@ footer {
 @media (min-width: 577px) {
   .footer-links { gap: 1rem; }
 }
+/* Fix para laptops tipo 1280x768 / 1366x768 */
+@media (max-width: 1366px) and (max-height: 800px) {
+  header .navbar h1 {
+    font-size: 0.9rem;       /* prueba 0.9rem, bajar a 0.85 si hace falta */
+    letter-spacing: 0.02rem; /* reduce el espaciado entre letras */
+    white-space: nowrap;     /* evita que rompa en espacios entre letras */
+    line-height: 1;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  header .navbar img {
+    width: 30px;             /* achica un poco el logo para ganar ancho */
+    height: auto;
+  }
+  .navbar { padding-top: 6px; padding-bottom: 6px; } /* opcional */
+}
