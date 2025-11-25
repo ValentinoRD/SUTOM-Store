@@ -690,3 +690,23 @@ footer {
   }
   .navbar { padding-top: 6px; padding-bottom: 6px; } /* opcional */
 }
+/* En móvil: ocultar texto de WhatsApp y Email, mostrar solo íconos */
+@media (max-width: 576px) {
+  /* Ocultar el texto dentro de los botones de WhatsApp y Email */
+  .card .btn-success.btn-sm span,
+  .card .btn-danger.btn-sm span {
+    display: none !important;
+  }
+  
+  /* Reducir padding de esos botones para que queden más compactos */
+  .card .btn-success.btn-sm,
+  .card .btn-danger.btn-sm {
+    padding: 0.35rem 0.5rem;
+  }
+  
+  /* Quitar margen del ícono cuando no hay texto */
+  .card .btn-success.btn-sm i,
+  .card .btn-danger.btn-sm i {
+    margin: 0 !important;
+  }
+}
